@@ -32,7 +32,7 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
 
 > Require the module before using
 
-    var rmdirr = require( 'rmdirr' );
+    var rmdir = require( 'rmdirr' );
 
 ### rmdirr( path, callback );
 
@@ -50,10 +50,10 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
 
 #### Example
 
-    var rmdirr = require( 'rmdirr' ),
-        path   = '/path/to/the/dir';
+    var rmdir = require( 'rmdirr' ),
+        path  = '/path/to/the/dir';
 
-    rmdirr( path, function (){
+    rmdir( path, function (){
       console.log( 'all files removed' );
     });
 

@@ -2,5 +2,5 @@ var rmdir = require( '../lib/rmdirr' ),
     path  = __dirname + '/assets';
 
 rmdir( path , function (){
-  console.log( 'all files removed' );
+  console.log( 'all files are removed' );
 });

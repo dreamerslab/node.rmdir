@@ -54,7 +54,7 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
         path  = '/path/to/the/dir';
 
     rmdir( path, function (){
-      console.log( 'all files removed' );
+      console.log( 'all files are removed' );
     });
 
 

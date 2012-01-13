@@ -1,6 +1,6 @@
 # rmdirr
 
-Remove all files in the given path recursively
+Remove all files in the given path recursively.
 
 
 

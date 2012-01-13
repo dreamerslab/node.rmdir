@@ -7,10 +7,10 @@ Remove all files in the given path recursively.
 ## Description
 
 Or just use `require( 'child_process' ).exec` and call `rm -r`
-  
+
     var exec = require( 'child_process' ).exec,
         path = '/path/to/the/dir';
-    
+
     exec( 'rm -r ' , function ( err, stdout, stderr ){
       // your callback goes here
     });
@@ -30,7 +30,25 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
 
 ## Usage
 
-> Example
+> Require the module before using
+
+    var rmdirr = require( 'rmdirr' );
+
+### rmdirr( path, callback );
+
+#### Arguments
+
+> path
+
+    type: String
+    desc: The path to be clear.
+
+> callback
+
+    type: Function
+    desc: The callback to be called after all files are removed.
+
+#### Example
 
     var rmdirr = require( 'rmdirr' ),
         path   = '/path/to/the/dir';

@@ -33,9 +33,11 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
 > Example
 
     var rmdirr = require( 'rmdirr' ),
-        path = '/path/to/the/dir';
+        path   = '/path/to/the/dir';
 
-    rmdirr( path );
+    rmdirr( path, function (){
+      console.log( 'all files removed' );
+    });
 
 
 

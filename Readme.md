@@ -11,7 +11,7 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
     var exec = require( 'child_process' ).exec,
         path = '/path/to/the/dir';
 
-    exec( 'rm -r ' , function ( err, stdout, stderr ){
+    exec( 'rm -r ' + path, function ( err, stdout, stderr ){
       // your callback goes here
     });
 

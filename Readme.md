@@ -47,13 +47,24 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
 
     type: Function
     desc: The callback to be called after all files are removed.
+    arguments:
+      err:
+        type: Error
+      dirs:
+        type: Array
+        desc: The removed dirs.
+      files:
+        type: Array
+        desc: The removed files.
 
 #### Example
 
     var rmdir = require( 'rmdirr' ),
         path  = '/path/to/the/dir';
 
-    rmdir( path, function (){
+    rmdir( path + '/assets', function ( err, dirs, files ){
+      console.log( dirs );
+      console.log( files );
       console.log( 'all files are removed' );
     });
 

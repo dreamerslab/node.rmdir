@@ -1,1 +1,1 @@
-module.exports = require( './lib/packer' );
+module.exports = require( './lib/rmdirr' );

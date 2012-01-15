@@ -1,5 +1,5 @@
-var rmdir = require( '../lib/rmdirr' ),
-    path  = __dirname + '/assets';
+var rmdir = require( '../lib/rmdirr' );
+var path  = __dirname + '/assets';
 
 rmdir( __dirname + '/assets', function ( err, dirs, files ){
   console.log( dirs );

@@ -8,8 +8,8 @@ Remove all files in the given path recursively.
 
 Or just use `require( 'child_process' ).exec` and call `rm -r`
 
-    var exec = require( 'child_process' ).exec,
-        path = '/path/to/the/dir';
+    var exec = require( 'child_process' ).exec;
+    var path = '/path/to/the/dir';
 
     exec( 'rm -r ' + path, function ( err, stdout, stderr ){
       // your callback goes here
@@ -59,8 +59,8 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
 
 #### Example
 
-    var rmdir = require( 'rmdirr' ),
-        path  = '/path/to/the/dir';
+    var rmdir = require( 'rmdirr' );
+    var path  = '/path/to/the/dir';
 
     rmdir( path + '/assets', function ( err, dirs, files ){
       console.log( dirs );

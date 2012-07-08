@@ -1,8 +1,9 @@
-var rmdir = require( '../lib/rmdirr' );
+var rmdir = require( '../lib/rmdir' );
 var path  = __dirname + '/assets';
 
 rmdir( __dirname + '/assets', function ( err, dirs, files ){
-  console.log( dirs );
-  console.log( files );
+  if( err ) return console.log( 'err', err );
+  console.log( 'dirs', dirs );
+  console.log( 'files', files );
   console.log( 'all files are removed' );
 });

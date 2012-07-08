@@ -1,5 +1,7 @@
 # rmdirr
 
+## THIS PACKAGE HAS RENAMED TO **rmdir**
+
 Remove all files in the given path recursively.
 
 

@@ -1,8 +1,14 @@
 # History
 
-## 0.0.1 / 2012-07-08
+## 0.0.3 / 2012-07-08
 
-- Remove only file as well
+- [bug fix] Excute callback with remove single file
+
+
+
+## 0.0.2 / 2012-07-08
+
+- Remove single file as well
 
 
 

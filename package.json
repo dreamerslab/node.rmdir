@@ -1,5 +1,5 @@
 {
-  "name"       : "rmdirr",
+  "name"       : "rmdir",
   "version"    : "0.0.1",
   "description": "Remove all files in the given path recursively",
   "keywords"   : [
@@ -10,7 +10,7 @@
   "dependencies": {},
   "repository"  : {
     "type": "git",
-    "url" : "https://github.com/dreamerslab/node.rmdirr.git"
+    "url" : "https://github.com/dreamerslab/node.rmdir.git"
   },
   "main"    : "index",
   "engines" : [ "node >= 0.4.0" ],

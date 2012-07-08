@@ -1,4 +1,4 @@
-# rmdirr
+# rmdir
 
 Remove all files in the given path recursively.
 
@@ -24,7 +24,7 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
 
 ## Installation
 
-    npm install rmdirr
+    npm install rmdir
 
 
 
@@ -32,9 +32,9 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
 
 > Require the module before using
 
-    var rmdir = require( 'rmdirr' );
+    var rmdir = require( 'rmdir' );
 
-### rmdirr( path, callback );
+### rmdir( path, callback );
 
 #### Arguments
 
@@ -59,7 +59,7 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
 
 #### Example
 
-    var rmdir = require( 'rmdirr' );
+    var rmdir = require( 'rmdir' );
     var path  = '/path/to/the/dir';
 
     rmdir( path + '/assets', function ( err, dirs, files ){

@@ -1,1 +1,1 @@
-module.exports = require( './lib/rmdirr' );
+module.exports = require( './lib/rmdir' );

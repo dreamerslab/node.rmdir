@@ -1,5 +1,11 @@
 # History
 
+## 1.0.0 / 2012-07-23
+
+- [refactoring] Use `fs` instead of `path` for node v0.8.x
+
+
+
 ## 0.0.3 / 2012-07-08
 
 - [bug fix] Excute callback with remove single file

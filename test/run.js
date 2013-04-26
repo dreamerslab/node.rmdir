@@ -1,9 +1,16 @@
-var rmdir = require( '../lib/rmdir' );
-var path  = __dirname + '/assets';
+var fs = require('fs')
+  , exec = require('child_process').exec
 
-rmdir( __dirname + '/assets', function ( err, dirs, files ){
-  if( err ) return console.log( 'err', err );
-  console.log( 'dirs', dirs );
-  console.log( 'files', files );
-  console.log( 'all files are removed' );
-});
+var rmdir = require( '..' );
+var a  = __dirname + '/assets';
+var b = __dirname + '/copy';
+
+exec('cp -R '+a+' '+b, function(e){
+	if (e) throw e
+	console.assert(fs.existsSync(b))
+	rmdir(b, function (e){
+	  if(e) throw e
+	  console.assert(!fs.existsSync(b))
+	  console.log('done!')
+	});
+})

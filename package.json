@@ -1,21 +1,29 @@
 {
-  "name"       : "rmdir",
-  "version"    : "1.0.0",
-  "description": "Remove all files in the given path recursively",
-  "keywords"   : [
-    "remove", "remove files", "remove all files", "remove path",
-    "remove dir", "rm -r", "rmdir", "remove files recursively"
-  ],
-  "author"      : "dreamerslab <ben@dreamerslab.com>",
-  "dependencies": {},
-  "repository"  : {
+  "name": "rmdir",
+  "version": "1.1.0",
+  "repository": {
     "type": "git",
-    "url" : "https://github.com/dreamerslab/node.rmdir.git"
+    "url": "https://github.com/dreamerslab/node.rmdir.git"
   },
-  "main"    : "index",
-  "engines" : [ "node >= 0.8.0" ],
-  "licenses": [{
-    "type": "MIT",
-    "url" : "http://en.wikipedia.org/wiki/MIT_License"
-  }]
+  "description": "Remove all files in the given path recursively",
+  "engines": [
+    "node >= 0.8.0"
+  ],
+  "author": "dreamerslab <ben@dreamerslab.com>",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://en.wikipedia.org/wiki/MIT_License"
+    }
+  ],
+  "keywords": [
+    "remove",
+    "remove files",
+    "remove all files",
+    "remove path",
+    "remove dir",
+    "rm -r",
+    "rmdir",
+    "remove files recursively"
+  ]
 }

@@ -1,47 +1,21 @@
 # rmdir
 
-Remove all files in the given path recursively.
-
-
-
-## Description
-
-Or just use `require( 'child_process' ).exec` and call `rm -r`
-
-    var exec = require( 'child_process' ).exec;
-    var path = '/path/to/the/dir';
-
-    exec( 'rm -r ' + path, function ( err, stdout, stderr ){
-      // your callback goes here
-    });
-
-
-## Requires
-
-    node >= 0.4.x
-
-
+Remove all files in the given path recursively. This is equivilent to the unix command `rm -r`.
 
 ## Installation
 
     npm install rmdir
 
+## API
 
-
-## Usage
-
-> Require the module before using
-
-    var rmdir = require( 'rmdir' );
-
-### rmdir( path, callback );
+### rmdir(path:String, cb:Function)
 
 #### Arguments
 
 > path
 
     type: String
-    desc: The path to be clear.
+    desc: The directory to remove
 
 > callback
 
@@ -50,25 +24,13 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
     arguments:
       err:
         type: Error
-      dirs:
-        type: Array
-        desc: The removed dirs.
-      files:
-        type: Array
-        desc: The removed files.
 
-#### Example
+## Example
 
     var rmdir = require( 'rmdir' );
-    var path  = '/path/to/the/dir';
-
-    rmdir( path + '/assets', function ( err, dirs, files ){
-      console.log( dirs );
-      console.log( files );
-      console.log( 'all files are removed' );
+    rmdir('/path/to/the/dir', function (err){
+      console.log('all files are removed');
     });
-
-
 
 ## License
 

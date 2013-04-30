@@ -18,7 +18,7 @@ module.exports = function rmdir(path, cb) {
     files.forEach(function(file){
       file = join(path, file);
       fs.stat(file, function (e, stat) {
-        if (e) done(e);
+        if (e) return done(e);
         if (stat.isDirectory()) rmdir(file, done);
         else fs.unlink(file, done);
       });

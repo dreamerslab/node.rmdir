@@ -9,8 +9,8 @@ exec('cp -R '+a+' '+b, function(e){
 	if (e) throw e
 	console.assert(fs.existsSync(b))
 	rmdir(b, function (e){
-	  if(e) throw e
-	  console.assert(!fs.existsSync(b))
+	  if (e) throw e
+	  if (fs.existsSync(b)) throw new Error(b + ' still exists')
 	  console.log('done!')
 	});
 })

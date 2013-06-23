@@ -1,6 +1,6 @@
 {
   "name": "rmdir",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/dreamerslab/node.rmdir.git"
@@ -25,5 +25,8 @@
     "rm -r",
     "rmdir",
     "remove files recursively"
-  ]
+  ],
+  "dependencies": {
+    "resultify": "~0.2.2"
+  }
 }

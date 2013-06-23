@@ -1,6 +1,10 @@
 
-var fs = require('fs')
+var decorate = require('resultify')
   , join = require('path').join
+  , fs = require('fs')
+
+module.exports = decorate(rmdir)
+module.exports.plain = rmdir
 
 /**
  * rm -r path
@@ -9,7 +13,7 @@ var fs = require('fs')
  * @param {Function} cb
  */
 
-module.exports = function rmdir(path, cb) {
+function rmdir(path, cb) {
   fs.readdir(path, function(e, files) {
     if (e) return done(e);
     var i = files.length;

@@ -1,41 +1,60 @@
 
-var decorate = require('resultify')
-  , join = require('path').join
-  , fs = require('fs')
+var each = require('foreach/async')
+var fs = require('lift-result/fs')
+var lift = require('lift-result')
+var join = require('path').join
 
-module.exports = decorate(rmdir)
-module.exports.plain = rmdir
+module.exports = exports = remove
 
 /**
- * rm -r path
+ * rm whatever happens to be at `path`
  *
  * @param {String} path
  * @param {Function} cb
+ * @api public
  */
 
-function rmdir(path, cb) {
-  fs.readdir(path, function(e, files) {
-    if (e) return done(e);
-    var i = files.length;
-    if (!i) return fs.rmdir(path, cb);
-
-    files.forEach(function(file){
-      file = join(path, file);
-      fs.lstat(file, function (e, stat) {
-        if (e) return done(e);
-        if (stat.isDirectory()) rmdir(file, done);
-        else fs.unlink(file, done);
-      });
-    });
-
-    function done(e){
-      if (e) {
-        cb && cb(e);
-        // `cb` mustn't be called twice
-        cb = null;
-        return;
-      }
-      if (--i <= 0) fs.rmdir(path, cb);
-    }
-  });
+function remove(path){
+	return dispatch(fs.lstat(path), path)
 }
+
+/**
+ * rm file or symlink
+ *
+ * @param {String} path
+ * @return {Result}
+ * @api public
+ */
+
+var rmfile = exports.file = fs.unlink
+
+/**
+ * empty dir and remove it
+ *
+ * @param {String} path
+ * @return {Result}
+ * @api public
+ */
+
+var rmdir = exports.dir = function(path){
+	return each(fs.readdir(path), function(name){
+		return remove(join(path, name))
+	}).then(function(){
+		return fs.rmdir(path)
+	})
+}
+
+/**
+ * dispatch on the type of `stat`
+ *
+ * @param {Stat} stat
+ * @param {String} path
+ * @return {Result}
+ * @api private
+ */
+
+var dispatch = lift(function(stat, path){
+	return stat.isDirectory()
+		? rmdir(path)
+		: rmfile(path)
+})

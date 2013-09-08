@@ -1,19 +1,44 @@
 
 var join = require('path').join
-	, fs = require('fs')
+var fs = require('fs')
+
+module.exports = exports = remove
 
 /**
- * rm -r path
+ * rm whatever happens to be at `path`
  *
- * @param {String} dir
+ * @param {String} path
+ * @param {Function} cb
+ * @api public
  */
 
-module.exports = function rmdirp(dir){
-	fs.readdirSync(dir).forEach(function(file){
-		file = join(dir, file)
-		var stat = fs.lstatSync(file)
-		if (stat.isDirectory()) rmdirp(file)
-		else fs.unlinkSync(file)
+function remove(path){
+	fs.lstatSync(path).isDirectory()
+		? rmdir(path)
+		: rmfile(path)
+}
+
+/**
+ * rm file or symlink
+ *
+ * @param {String} path
+ * @return {Result}
+ * @api public
+ */
+
+var rmfile = exports.file = fs.unlinkSync
+
+/**
+ * empty dir and remove it
+ *
+ * @param {String} path
+ * @return {Result}
+ * @api public
+ */
+
+var rmdir = exports.dir = function(path){
+	fs.readdirSync(path).forEach(function(name){
+		remove(join(path, name))
 	})
-	fs.rmdirSync(dir)
+	fs.rmdirSync(path)
 }

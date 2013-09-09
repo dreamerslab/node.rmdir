@@ -4,30 +4,34 @@ Remove all files in the given path recursively. This is equivilent to the unix c
 
 ## Installation
 
-    npm install rmdir
+    npm install rm-r
+
+then in your app
+
+```js
+var rm = require('rm-r')
+```
 
 ## API
 
-### rmdir(path:String, cb:Function)
+This package contains two implementations sync and async. Both have the same API and test suite but the async version returns [results](//github.com/jkroso/result).
 
-#### Arguments
+## remove(path)
 
-> path
+  rm whatever happens to be at `path`
 
-    type: String
-    desc: The directory to remove
+## rmfile(path)
 
-> callback
+  rm file or symlink
 
-    type: Function
-    desc: The callback to be called after all files are removed.
-    arguments:
-      err:
-        type: Error
+## rmdir(path)
+
+  empty dir and remove it
 
 ## Example
 
-    var rmdir = require( 'rmdir' );
-    rmdir('/path/to/the/dir', function (err){
-      console.log('all files are removed');
-    });
+```js
+rm('/path/to/the/thing/you/want/gone')
+rm.file('/path/to/a/file')
+rm.dir('/path/to/a/dir')
+```

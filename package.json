@@ -1,21 +1,24 @@
 {
-  "name"       : "rmdir",
-  "version"    : "1.0.0",
-  "description": "Remove all files in the given path recursively",
-  "keywords"   : [
-    "remove", "remove files", "remove all files", "remove path",
-    "remove dir", "rm -r", "rmdir", "remove files recursively"
-  ],
-  "author"      : "dreamerslab <ben@dreamerslab.com>",
-  "dependencies": {},
-  "repository"  : {
-    "type": "git",
-    "url" : "https://github.com/dreamerslab/node.rmdir.git"
+  "name": "rm-r",
+  "version": "1.0.0",
+  "description": "Remove all files/directories below a path recursively",
+  "dependencies": {
+    "foreach": "http://github.com/jkroso/foreach/tarball/0.8.7",
+    "lift-result": "0.1.1"
   },
-  "main"    : "index",
-  "engines" : [ "node >= 0.8.0" ],
-  "licenses": [{
-    "type": "MIT",
-    "url" : "http://en.wikipedia.org/wiki/MIT_License"
-  }]
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkroso/node.rmdir.git"
+  },
+  "author": "Jake Rosoman",
+  "keywords": [
+    "remove",
+    "rm -r",
+    "rmdir"
+  ],
+  "devDependencies": {
+    "better-assert": "1.0.0",
+    "result": "0.4.2",
+    "mocha": "1.12.1"
+  }
 }

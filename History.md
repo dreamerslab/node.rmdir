@@ -1,5 +1,11 @@
 # History
 
+## 1.0.2 / 2013-12-12
+
+- [update packages] node.flow->1.2.3
+
+
+
 ## 1.0.1 / 2013-12-11
 
 - [bug fix] Use async api to avoid error

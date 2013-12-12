@@ -1,5 +1,12 @@
 # History
 
+## 1.0.1 / 2013-12-11
+
+- [bug fix] Use async api to avoid error
+- [refactoring] Use `fs.lstat` instead of `fs.stat` for `symlink`
+
+
+
 ## 1.0.0 / 2012-07-23
 
 - [refactoring] Use `fs` instead of `path` for node v0.8.x

@@ -1,13 +1,15 @@
 {
   "name"       : "rmdir",
-  "version"    : "1.0.0",
+  "version"    : "1.0.1",
   "description": "Remove all files in the given path recursively",
   "keywords"   : [
     "remove", "remove files", "remove all files", "remove path",
     "remove dir", "rm -r", "rmdir", "remove files recursively"
   ],
   "author"      : "dreamerslab <ben@dreamerslab.com>",
-  "dependencies": {},
+  "dependencies": {
+    "node.flow" : "1.2.2"
+  },
   "repository"  : {
     "type": "git",
     "url" : "https://github.com/dreamerslab/node.rmdir.git"

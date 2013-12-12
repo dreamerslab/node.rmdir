@@ -1,6 +1,6 @@
 {
   "name"       : "rmdir",
-  "version"    : "1.0.1",
+  "version"    : "1.0.2",
   "description": "Remove all files in the given path recursively",
   "keywords"   : [
     "remove", "remove files", "remove all files", "remove path",
@@ -8,7 +8,7 @@
   ],
   "author"      : "dreamerslab <ben@dreamerslab.com>",
   "dependencies": {
-    "node.flow" : "1.2.2"
+    "node.flow" : "1.2.3"
   },
   "repository"  : {
     "type": "git",

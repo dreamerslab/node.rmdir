@@ -70,6 +70,12 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
 
 
 
+## Creadit
+
+[Aaron Larner](https://github.com/alarner)
+
+
+
 ## License
 
 (The MIT License)

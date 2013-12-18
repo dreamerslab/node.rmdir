@@ -1,5 +1,11 @@
 # History
 
+## 1.0.3 / 2013-12-18
+
+- [bug fix] Throw exception if fir or file doesn't exist
+
+
+
 ## 1.0.2 / 2013-12-12
 
 - [update packages] node.flow->1.2.3

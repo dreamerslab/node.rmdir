@@ -1,5 +1,11 @@
 # History
 
+## 1.0.4 / 2014-01-09
+
+- [bug fix] Return `callback` instead of `ready` after `unlink` files
+
+
+
 ## 1.0.3 / 2013-12-18
 
 - [bug fix] Throw exception if fir or file doesn't exist

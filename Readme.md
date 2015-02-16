@@ -34,7 +34,10 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
 
     var rmdir = require( 'rmdir' );
 
-### rmdir( path, callback );
+### rmdir( path, [options], callback );
+
+You can optionally pass in an alternate fs implementation by passing in options.fs. Your implementation should have fs.lstat(path, callback),
+fs.unlink(path, callback), fs.readdir(path, callback), fs.rmdir(path, callback), and fs.exists(path, callback) implemented.
 
 #### Arguments
 
@@ -42,6 +45,10 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
 
     type: String
     desc: The path to be clear.
+
+> options
+    type: Object
+    desc: Options to be used when removing all files.
 
 > callback
 
@@ -74,6 +81,7 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
 
 [Aaron Larner](https://github.com/alarner)
 [Glen R. Goodwin](https://github.com/arei)
+[David Pate](https://github.com/DavidTPate)
 
 
 

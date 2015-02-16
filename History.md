@@ -1,5 +1,11 @@
 # History
 
+## 1.1.0 / 2015-02-16
+
+- [new feature] Added the ability to pass in an optional alternative file system to remove the files
+
+
+
 ## 1.0.4 / 2014-01-09
 
 - [bug fix] Return `callback` instead of `ready` after `unlink` files

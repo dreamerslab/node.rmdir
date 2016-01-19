@@ -1,5 +1,11 @@
 # History
 
+## 1.2.0 / 2016-01-19
+
+- [new feature] Calling it without the callback
+
+
+
 ## 1.1.0 / 2015-02-16
 
 - [new feature] Added the ability to pass in an optional alternative file system to remove the files

@@ -1,6 +1,6 @@
 {
   "name"       : "rmdir",
-  "version"    : "1.1.0",
+  "version"    : "1.2.0",
   "description": "Remove all files in the given path recursively",
   "keywords"   : [
     "remove", "remove files", "remove all files", "remove path",
@@ -11,9 +11,14 @@
     { "name": "Aaron Larner" },
     { "name": "Glen R. Goodwin" },
     {
-      "name": "David Pate",
+      "name" : "David Pate",
       "email": "davidtpate@gmail.com",
-      "url": "http://davidtpate.com"
+      "url"  : "http://davidtpate.com"
+    },
+    {
+      "name" : "Radare",
+      "email": "pancake@nopcode.org",
+      "url"  : "http://www.radare.org/"
     }
   ],
   "dependencies": {

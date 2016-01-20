@@ -13,6 +13,8 @@ Or just use `require( 'child_process' ).exec` and call `rm -r`
       // your callback goes here
     });
 
+You can also checkout [rimraf](https://github.com/isaacs/rimraf) from [isaacs](https://github.com/isaacs).
+
 ## Requires
 
     node >= 0.4.x

@@ -32,7 +32,6 @@
     }
   ],
   "dependencies": {
-    "node.flow": "1.2.3"
   },
   "repository": {
     "type": "git",
